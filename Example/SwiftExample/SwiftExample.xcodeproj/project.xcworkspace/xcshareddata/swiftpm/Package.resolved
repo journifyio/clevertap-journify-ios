@@ -1,0 +1,60 @@
+{
+  "originHash" : "a08c4516b92504c3d0a2b9f0e49bc9d3402bca92dfbc66470f19c2dbf72b18d3",
+  "pins" : [
+    {
+      "identity" : "clevertap-ios-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/CleverTap/clevertap-ios-sdk.git",
+      "state" : {
+        "revision" : "94db7cf88e3f8835b100b38a34ef24d2664b9309",
+        "version" : "6.1.0"
+      }
+    },
+    {
+      "identity" : "clevertap-journify-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/journifyio/clevertap-journify-ios",
+      "state" : {
+        "revision" : "3798200cadf1dc08b2d5514398b0ebcaecc3499d",
+        "version" : "0.0.5"
+      }
+    },
+    {
+      "identity" : "fakery",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/vadymmarkov/Fakery",
+      "state" : {
+        "revision" : "71cb3bf36a808534659d1248780c2bf3c4c4fc91",
+        "version" : "5.1.0"
+      }
+    },
+    {
+      "identity" : "journify-ios-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/journifyio/journify-ios-sdk.git",
+      "state" : {
+        "revision" : "283dba2835b7e6c6f872346f5725f388f75fde5f",
+        "version" : "0.0.5"
+      }
+    },
+    {
+      "identity" : "sdwebimage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SDWebImage/SDWebImage.git",
+      "state" : {
+        "revision" : "73b9397cfbd902f606572964055464903b1d84c6",
+        "version" : "5.19.0"
+      }
+    },
+    {
+      "identity" : "sovran-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/segmentio/Sovran-Swift.git",
+      "state" : {
+        "revision" : "a342b905f6baa64499cabdf61ccc185ec476b7b2",
+        "version" : "1.1.1"
+      }
+    }
+  ],
+  "version" : 3
+}
