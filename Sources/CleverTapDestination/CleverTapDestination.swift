@@ -9,12 +9,15 @@ import Journify
 import CleverTapSDK
 
 public class CleverTapDestination: DestinationPlugin {
-    public var key: String = "CleverTap"
+    public var key: String = "clevertap"
     public var timeline = Timeline()
     public var type = PluginType.destination
     public weak var analytics: Journify? = nil
-    
-    let cleverTap: CleverTap
+    fileprivate var settings: CleverTapSettings? = nil
+
+    var cleverTap: CleverTap?
+
+    public init() { }
     
     public init(accountID: String, token: String, region: String? = nil, proxyDomain: String? = nil, spikyProxyDomain: String? = nil) {
         if let proxyDomain = proxyDomain, let spikyProxyDomain = spikyProxyDomain {
@@ -29,6 +32,27 @@ public class CleverTapDestination: DestinationPlugin {
         CleverTap.sharedInstance()?.setCustomSdkVersion(libName, version: 1)
         CleverTap.sharedInstance()?.notifyApplicationLaunched(withOptions: nil)
         cleverTap = CleverTap.sharedInstance()!
+    }
+    
+    public func update(settings: Settings, type: UpdateType) {
+        // Skip if you have a singleton and don't want to keep updating via settings.
+//        guard type == .initial else { return }
+        
+        // Grab the settings and assign them for potential later usage.
+        // Note: Since integrationSettings is generic, strongly type the variable.
+        guard let settings: CleverTapSettings = settings.integrationSettings(forPlugin: self) else { return }
+        self.settings = settings
+
+        if let region = settings.region {
+            CleverTap.setCredentialsWithAccountID(settings.accountID, token: settings.token, region: region)
+        } else {
+            CleverTap.setCredentialsWithAccountID(settings.accountID, andToken: settings.token)
+        }
+        let libName = "Journify-iOS"
+        CleverTap.sharedInstance()?.setLibrary(libName)
+        CleverTap.sharedInstance()?.setCustomSdkVersion(libName, version: 1)
+        CleverTap.sharedInstance()?.notifyApplicationLaunched(withOptions: nil)
+        cleverTap = CleverTap.sharedInstance()
     }
     
     public func identify(event: IdentifyEvent) -> IdentifyEvent? {
@@ -62,7 +86,7 @@ public class CleverTapDestination: DestinationPlugin {
         // Remove nested dictionaries from profile
         profile = profile.filter { !($0.value is NSDictionary) }
         
-        cleverTap.onUserLogin(profile)
+        cleverTap?.onUserLogin(profile)
         return event
     }
     
@@ -71,14 +95,14 @@ public class CleverTapDestination: DestinationPlugin {
         if eventName == "Order Completed" {
             self.handleOrderCompleted(event: event)
         } else {
-            cleverTap.recordEvent(eventName, withProps: event.properties?.dictionaryValue ?? [:])
+            cleverTap?.recordEvent(eventName, withProps: event.properties?.dictionaryValue ?? [:])
         }
         return event
     }
     
     public func screen(event: ScreenEvent) -> ScreenEvent? {
         guard let screenName = event.name else { return event }
-        cleverTap.recordScreenView(screenName)
+        cleverTap?.recordScreenView(screenName)
         return event
     }
     
@@ -100,16 +124,28 @@ public class CleverTapDestination: DestinationPlugin {
                 }
             }
         }
-        CleverTap.sharedInstance()?.recordChargedEvent(withDetails: details, andItems: items)
+        cleverTap?.recordChargedEvent(withDetails: details, andItems: items)
     }
 }
 
 extension CleverTapDestination: RemoteNotifications {
     public func registeredForRemoteNotifications(deviceToken: Data) {
-        cleverTap.setPushToken(deviceToken)
+        cleverTap?.setPushToken(deviceToken)
     }
         
     public func receivedRemoteNotification(userInfo: [AnyHashable : Any]) {
-        cleverTap.handleNotification(withData: userInfo)
+        cleverTap?.handleNotification(withData: userInfo)
+    }
+}
+
+private struct CleverTapSettings: Codable {
+    let accountID: String
+    let token: String
+    let region: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case accountID = "account_id"
+        case token
+        case region
     }
 }

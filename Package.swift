@@ -20,7 +20,7 @@ let package = Package(
         .package(
 	    name: "Journify",
             url: "https://github.com/journifyio/journify-ios-sdk.git",
-            from: "0.0.5"
+            from: "0.0.6"
         ),
 	.package(
 	    name: "CleverTapSDK",

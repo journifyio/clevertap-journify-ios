@@ -604,7 +604,7 @@
 			repositoryURL = "https://github.com/journifyio/clevertap-journify-ios";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.3;
+				minimumVersion = 0.0.5;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
