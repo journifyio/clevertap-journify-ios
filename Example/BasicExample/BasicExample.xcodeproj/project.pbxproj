@@ -38,7 +38,7 @@
 /* Begin PBXFileReference section */
 		10305B962BA9928E00BECDC6 /* BasicExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BasicExample.entitlements; sourceTree = "<group>"; };
 		10C6C21F2BA8F592004CBD4A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		46EDC6F227C6B8D100B870D7 /* BasicExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		46EDC6F227C6B8D100B870D7 /* CleverTapPlugin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleverTapPlugin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46EDC6F527C6B8D100B870D7 /* BasicExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicExampleApp.swift; sourceTree = "<group>"; };
 		46EDC6F727C6B8D100B870D7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		46EDC6F927C6B8D200B870D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -89,7 +89,7 @@
 		46EDC6F327C6B8D100B870D7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				46EDC6F227C6B8D100B870D7 /* BasicExample.app */,
+				46EDC6F227C6B8D100B870D7 /* CleverTapPlugin.app */,
 				46EDC70227C6B8D200B870D7 /* BasicExampleTests.xctest */,
 				46EDC70C27C6B8D200B870D7 /* BasicExampleUITests.xctest */,
 			);
@@ -154,7 +154,7 @@
 				1019B0B82BAD9BF100C1AC46 /* CleverTapDestination */,
 			);
 			productName = BasicExample;
-			productReference = 46EDC6F227C6B8D100B870D7 /* BasicExample.app */;
+			productReference = 46EDC6F227C6B8D100B870D7 /* CleverTapPlugin.app */;
 			productType = "com.apple.product-type.application";
 		};
 		46EDC70127C6B8D200B870D7 /* BasicExampleTests */ = {
@@ -431,10 +431,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = BasicExample/BasicExample.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BasicExample/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 6J8FV53EUG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -447,8 +448,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.journifyCleverTap.BasicExample;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.journify.clever;
+				PRODUCT_NAME = CleverTapPlugin;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -461,10 +463,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = BasicExample/BasicExample.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BasicExample/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 6J8FV53EUG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -477,8 +480,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.journifyCleverTap.BasicExample;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.journify.clever;
+				PRODUCT_NAME = CleverTapPlugin;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
