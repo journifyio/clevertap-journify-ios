@@ -1,0 +1,43 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "CleverTapSDK",
+        "repositoryURL": "https://github.com/CleverTap/clevertap-ios-sdk.git",
+        "state": {
+          "branch": null,
+          "revision": "4326cc44d928b062a04ec770e20c318cc2699076",
+          "version": "6.2.1"
+        }
+      },
+      {
+        "package": "Journify",
+        "repositoryURL": "https://github.com/journifyio/journify-ios-sdk.git",
+        "state": {
+          "branch": null,
+          "revision": "b1bf3e36c760eed83abe9d8db4b6850874cb3ed8",
+          "version": "0.1.0"
+        }
+      },
+      {
+        "package": "SDWebImage",
+        "repositoryURL": "https://github.com/SDWebImage/SDWebImage.git",
+        "state": {
+          "branch": null,
+          "revision": "f6afa0132961d593f07970d84e2d8b588c29ea04",
+          "version": "5.19.1"
+        }
+      },
+      {
+        "package": "Sovran",
+        "repositoryURL": "https://github.com/segmentio/Sovran-Swift.git",
+        "state": {
+          "branch": null,
+          "revision": "a342b905f6baa64499cabdf61ccc185ec476b7b2",
+          "version": "1.1.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
