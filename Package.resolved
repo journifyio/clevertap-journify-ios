@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/journifyio/journify-ios-sdk.git",
         "state": {
           "branch": null,
-          "revision": "b1bf3e36c760eed83abe9d8db4b6850874cb3ed8",
-          "version": "0.1.0"
+          "revision": "fe465ff7d4c1caa2e428e67feba21d5be5aa011a",
+          "version": "0.1.4"
         }
       },
       {
@@ -24,8 +24,8 @@
         "repositoryURL": "https://github.com/SDWebImage/SDWebImage.git",
         "state": {
           "branch": null,
-          "revision": "f6afa0132961d593f07970d84e2d8b588c29ea04",
-          "version": "5.19.1"
+          "revision": "be0bcd7823ce56629948491f2eaeaa19979514f7",
+          "version": "5.19.4"
         }
       },
       {
@@ -33,8 +33,8 @@
         "repositoryURL": "https://github.com/segmentio/Sovran-Swift.git",
         "state": {
           "branch": null,
-          "revision": "a342b905f6baa64499cabdf61ccc185ec476b7b2",
-          "version": "1.1.1"
+          "revision": "24867f3e4ac62027db9827112135e6531b6f4051",
+          "version": "1.1.2"
         }
       }
     ]
