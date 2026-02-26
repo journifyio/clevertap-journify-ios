@@ -44,6 +44,53 @@ Journify.shared().add(plugin: cleverTapDestination)
 ```
 
 
+## Development
+
+### Requirements
+
+- Xcode 14+
+- Swift 5.3+
+- iOS 13.0+
+
+### Setup
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/journifyio/clevertap-journify-ios.git
+   cd clevertap-journify-ios
+   ```
+
+2. Resolve dependencies:
+   ```bash
+   swift package resolve
+   ```
+
+3. Open the example app:
+   ```bash
+   open Example/SwiftExample/SwiftExample.xcodeproj
+   ```
+
+4. In Xcode, go to **File > Packages > Resolve Package Versions** to sync the workspace dependencies.
+
+### Running the Example App
+
+The example app (`Example/SwiftExample`) lets you test the integration end-to-end. On launch it prompts for:
+
+- **Journify Write Key** — your Journify source write key
+- **CleverTap Account ID** — from the CleverTap dashboard
+- **CleverTap Token** — from the CleverTap dashboard
+- **CleverTap Region** - from the CleverTap dashboard
+
+### Project Structure
+
+```
+.
+├── Sources/CleverTapDestination/   # SDK source
+├── Example/SwiftExample/           # Example Xcode project
+├── Package.swift                   # SPM manifest
+└── Package.resolved                # Pinned dependency versions
+```
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
