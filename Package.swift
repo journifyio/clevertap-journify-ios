@@ -25,7 +25,7 @@ let package = Package(
 	.package(
 	    name: "CleverTapSDK",
             url: "https://github.com/CleverTap/clevertap-ios-sdk.git",
-            from: "6.2.1"
+            from: "7.5.0"
         )
     ],
     targets: [
